@@ -18,16 +18,6 @@ let music;
 const tailPosY = [];
 const tailPosX = [];
 
-function preload() {
-	//sounds
-	buttonFSound = loadSound("old-radio-button-click-97549.mp3");
-	music = loadSound("russ-hewitt--bucharest-all-star-orchestra-palma-de-mallorca-symphonic.mp3");
-	hiya = loadSound("hi-ya.mp3");
-	appleMunch = loadSound("apple_munchSFX.mp3");
-	snakeMoveSFX = loadSound("powerUp.wav")
-	appleIMG = loadImage("appleImage.png")
-}
-
 function spawnApple() {
 	appleX = (random(20, width - 20));
 	appleY = (random(20, height - 20));
@@ -282,28 +272,24 @@ function draw() {
 	//D RIGHT
 	if (keyIsDown(68) && direction !== 4) {
 		direction = 3
-		//snakeMoveSFX.play()
 		//console.log("d pressed");
 	}
 	
 	//A LEFT
 	if (keyIsDown(65) && direction !== 3) {
 		direction = 4
-		//snakeMoveSFX.play()
 		//console.log("a pressed");
 	}
 	
 	//W UP
 	if (keyIsDown(87) && direction !== 5) {
 		direction = 2
-		//snakeMoveSFX.play()
 		//console.log("w pressed");
 	}
 		
 	//S DOWN
 	if (keyIsDown(83) && direction !== 2) {
 		direction = 5
-		//snakeMoveSFX.play()
 		//console.log("s pressed");
 	}
 	
@@ -311,8 +297,7 @@ function draw() {
 	
 	fill(0, 100, 100);  // red in HSB
 	noStroke();
-	//circle(appleX, appleY, 20);
-	image(appleIMG, appleX, appleY, 20, 20);
+	circle(appleX, appleY, 20);
 	
 	let appleDist = dist(posX, posY, appleX, appleY);
 	if (appleDist < 30) {
@@ -323,7 +308,6 @@ function draw() {
 			appleCount+= 2;
 		}
 		spawnApple()
-		appleMunch.play()
 	}
 	
 	//snake head/rotation
@@ -391,10 +375,6 @@ function keyPressed() {
 	if (key === 'f') {
 		appleCount += 1
 	}
-	
-	if (key === 'm') {
-		music.stop();
-		}
 }
 
 function mouseClicked() {
@@ -402,7 +382,6 @@ function mouseClicked() {
 		if (descrip) {
 		descrip.remove();
 		descrip = undefined
-		music.play();
 		checkvar = true
 		hardMode = false
 		}
@@ -412,7 +391,6 @@ function mouseClicked() {
 		if (descrip) {
 		descrip.remove();
 		descrip = undefined
-		music.play();
 		checkvar = true
 		hardMode = true
 		}
