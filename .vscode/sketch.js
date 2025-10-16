@@ -300,7 +300,7 @@ function draw() {
 	circle(appleX, appleY, 20);
 	
 	let appleDist = dist(posX, posY, appleX, appleY);
-	if (appleDist < 30) {
+	if (appleDist < 20) {
 		if (hardMode === false) {
 			appleCount += 3;
 		}
