@@ -128,7 +128,7 @@ snakehead.pop()
 	descrip.fill(360, 100, 100)
 	descrip.textSize(10)
 	descrip.text("No Death, Double Points, Slower", 220, 200)
-	descrip.text("Death, Single Points, Faster", 420, 200)
+	descrip.text("Death and Faster", 420, 200)
 	descrip.textSize(10)
 	descrip.rect(220, 260, 70, 15, 5)
 	descrip.fill(0)
@@ -251,8 +251,6 @@ function draw() {
 			fill(33, 100, 100)
 			noStroke()
 			circle(theX, theY, 20)
-			if (frameCount % 10 === 0) {
-				circle(theX, theY, 10)
 			}
 		}
 	}
