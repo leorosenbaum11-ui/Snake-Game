@@ -251,7 +251,6 @@ function draw() {
 			fill(33, 100, 100)
 			noStroke()
 			circle(theX, theY, 20)
-			}
 		}
 	}
 	
