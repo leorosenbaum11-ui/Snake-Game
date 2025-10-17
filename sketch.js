@@ -139,7 +139,7 @@ snakehead.pop()
 	descrip.text("Hard Mode", 420, 260)
 	
 	//beginning states
-	appleCount = 3
+	appleCount = 1000
 	snakeDead = false
 	checkvar = false
 	spawnApple()
