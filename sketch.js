@@ -261,6 +261,12 @@ function draw() {
 			vertex(theX, theY-10);
 			vertex(theX-10, theY);
 			endShape(CLOSE)
+
+			beginShape();
+			vertex(theX, theY);
+			vertex(theX, theY+10);
+			vertex(theX+10, theY);
+			endShape(CLOSE)
 			
 			noStroke();
 		}
