@@ -250,24 +250,24 @@ function draw() {
 		if (theX !== undefined && theY !== undefined && checkvar === true) {
 			fill(33, 100, 100)
 			noStroke()
-			circle(theX, theY, 20)
+			circle(theX, theY, 30)
 
 			strokeWeight(1)
 			stroke(0)
 			beginShape();
 			vertex(theX, theY);
-			vertex(theX, theY-10);
-			vertex(theX-10, theY);
+			vertex(theX, theY-25);
+			vertex(theX-25, theY);
 			endShape(CLOSE)
 
 			beginShape();
 			vertex(theX, theY);
-			vertex(theX, theY+10);
-			vertex(theX+10, theY);
+			vertex(theX, theY+25);
+			vertex(theX+25, theY);
 			endShape(CLOSE)
 
 			fill(15, 100, 100)
-			circle(theX, theY, 15)
+			circle(theX, theY, 25)
 			
 			noStroke();
 		}
@@ -316,7 +316,7 @@ function draw() {
 	circle(appleX, appleY, 20);
 	
 	let appleDist = dist(posX, posY, appleX, appleY);
-	if (appleDist < 20) {
+	if (appleDist < 30) {
 		if (hardMode === false) {
 			appleCount += 3;
 		}
@@ -334,7 +334,7 @@ function draw() {
 		push()
 		translate(posX, posY)
 		rotate(3*PI/2)
-		scale(0.2)
+		scale(0.35)
 		image(snakehead, 0, 0)
 		pop()
 	}
@@ -342,7 +342,7 @@ function draw() {
 	if (direction === 3) {
 		push()
 		translate(posX, posY)
-		scale(0.2)
+		scale(0.35)
 		image(snakehead, 0, 0)
 		pop()
 	}
@@ -351,7 +351,7 @@ function draw() {
 		push()
 		translate(posX, posY)
 		rotate(PI)
-		scale(0.2)
+		scale(0.35)
 		image(snakehead, 0, 0)
 		pop()
 	}
@@ -360,7 +360,7 @@ function draw() {
 		push()
 		translate(posX, posY)
 		rotate(PI/2)
-		scale(0.2)
+		scale(0.35)
 		image(snakehead, 0, 0)
 		pop()
 	}
