@@ -318,10 +318,10 @@ function draw() {
 	let appleDist = dist(posX, posY, appleX, appleY);
 	if (appleDist < 30) {
 		if (hardMode === false) {
-			appleCount += 3;
+			appleCount += 5;
 		}
 		if (hardMode === true) {
-			appleCount+= 2;
+			appleCount+= 5;
 		}
 		spawnApple()
 	}
@@ -378,7 +378,7 @@ function draw() {
 		fill(0)
 		textFont('Courier New')
 		textSize(20)
-		text(appleCount, 320, 40)
+		//text(appleCount, 320, 40)
 		pop()
 	}
 	
