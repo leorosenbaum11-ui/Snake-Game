@@ -251,8 +251,6 @@ function draw() {
 			fill(33, 100, 100)
 			noStroke()
 			circle(theX, theY, 20)
-			fill(15, 100, 100)
-			circle(theX, theY, 15)
 
 			strokeWeight(1)
 			stroke(0)
@@ -267,6 +265,9 @@ function draw() {
 			vertex(theX, theY+10);
 			vertex(theX+10, theY);
 			endShape(CLOSE)
+
+			fill(15, 100, 100)
+			circle(theX, theY, 15)
 			
 			noStroke();
 		}
