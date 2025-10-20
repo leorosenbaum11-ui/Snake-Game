@@ -1,3 +1,4 @@
+let appleAmount
 let posX = 320
 let posY = 240
 let snakeTail
@@ -160,37 +161,37 @@ function draw() {
 	
 	if (direction === 2) {
 		if (hardMode === true) {
-			posY -= 5
+			posY -= appleAmount * 0.4
 		}
 		if (hardMode === false) {
-			posY -= 3
+			posY -= appleAmount * 0.4
 		}
 	}
 	
 	if (direction === 3) {
 		if (hardMode === true) {
-			posX += 5
+			posX += appleAmount * 0.4
 		}
 		if (hardMode === false) {
-			posX += 3
+			posX += appleAmount * 0.4
 		}
 	}
 	
 	if (direction === 4) {
 		if (hardMode === true) {
-			posX -= 5
+			posX -= appleAmount * 0.4
 		}
 		if (hardMode === false) {
-			posX -= 3
+			posX -= appleAmount * 0.4
 		}
 	}
 	
 	if (direction === 5) {
 		if (hardMode === true) {
-			posY += 5
+			posY += appleAmount * 0.4
 		}
 		if (hardMode === false) {
-			posY += 3
+			posY += appleAmount * 0.4
 		}
 	}
 	
@@ -319,9 +320,11 @@ function draw() {
 	if (appleDist < 30) {
 		if (hardMode === false) {
 			appleCount += 5;
+			appleAmount ++
 		}
 		if (hardMode === true) {
 			appleCount+= 5;
+			appleAmount++
 		}
 		spawnApple()
 	}
@@ -378,7 +381,7 @@ function draw() {
 		fill(0)
 		textFont('Courier New')
 		textSize(20)
-		//text(appleCount, 320, 40)
+		text(appleAmount, 320, 40)
 		pop()
 	}
 	
