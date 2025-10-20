@@ -141,6 +141,7 @@ snakehead.pop()
 	
 	//beginning states
 	appleCount = 3
+	appleAmount = 3
 	snakeDead = false
 	checkvar = false
 	spawnApple()
