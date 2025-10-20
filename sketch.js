@@ -162,37 +162,37 @@ function draw() {
 	
 	if (direction === 2) {
 		if (hardMode === true) {
-			posY -= appleAmount * 0.4
+			posY -= appleAmount
 		}
 		if (hardMode === false) {
-			posY -= appleAmount * 0.4
+			posY -= appleAmount
 		}
 	}
 	
 	if (direction === 3) {
 		if (hardMode === true) {
-			posX += appleAmount * 0.4
+			posX += appleAmount
 		}
 		if (hardMode === false) {
-			posX += appleAmount * 0.4
+			posX += appleAmount
 		}
 	}
 	
 	if (direction === 4) {
 		if (hardMode === true) {
-			posX -= appleAmount * 0.4
+			posX -= appleAmount
 		}
 		if (hardMode === false) {
-			posX -= appleAmount * 0.4
+			posX -= appleAmount
 		}
 	}
 	
 	if (direction === 5) {
 		if (hardMode === true) {
-			posY += appleAmount * 0.4
+			posY += appleAmount
 		}
 		if (hardMode === false) {
-			posY += appleAmount * 0.4
+			posY += appleAmount
 		}
 	}
 	
