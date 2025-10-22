@@ -1,3 +1,4 @@
+let extremeMode
 let appleAmount
 let posX = 320
 let posY = 240
@@ -146,6 +147,7 @@ snakehead.pop()
 	checkvar = false
 	spawnApple()
 	hardMode = false
+	extremeMode = false
 }
 
 //direction 1 is none
@@ -160,39 +162,50 @@ function draw() {
 		
 	}
 	
+	speed = appleAmount
+
 	if (direction === 2) {
 		if (hardMode === true) {
-			posY -= appleAmount
+			posY -= 4
 		}
 		if (hardMode === false) {
-			posY -= appleAmount
+			posY -= speed * 0.4
 		}
 	}
 	
 	if (direction === 3) {
 		if (hardMode === true) {
-			posX += appleAmount
+			posX += 4
 		}
-		if (hardMode === false) {
-			posX += appleAmount
+		if (hardMode === false && extremeMode === true) {
+			posX += speed * 0.4
+		}
+		if (hardMode === false && extremeMode === false) {
+			posX += 3
 		}
 	}
 	
 	if (direction === 4) {
 		if (hardMode === true) {
-			posX -= appleAmount
+			posX -= 4
 		}
-		if (hardMode === false) {
-			posX -= appleAmount
+		if (hardMode === false && extremeMode === true) {
+			posX += speed * 0.4
+		}
+		if (hardMode === false && extremeMode === false) {
+			posX += 3
 		}
 	}
 	
 	if (direction === 5) {
 		if (hardMode === true) {
-			posY += appleAmount
+			posY += 4
 		}
-		if (hardMode === false) {
-			posY += appleAmount
+		if (hardMode === false && extremeMode === true) {
+			posX += speed * 0.4
+		}
+		if (hardMode === false && extremeMode === false) {
+			posX += 3
 		}
 	}
 	
@@ -200,8 +213,11 @@ function draw() {
 		if (hardMode === false) {
 			posX = 0
 		}
-		if (hardMode === true) {
-			snakeDead = true
+		if (hardMode === false && extremeMode === true) {
+			posX += speed * 0.4
+		}
+		if (hardMode === false && extremeMode === false) {
+			posX += 3
 		}
 	}
 	
@@ -209,8 +225,11 @@ function draw() {
 		if (hardMode === false) {
 			posX = 640
 		}
-		if (hardMode === true) {
-			snakeDead = true
+		if (hardMode === false && extremeMode === true) {
+			posX += speed * 0.4
+		}
+		if (hardMode === false && extremeMode === false) {
+			posX += 3
 		}
 	}
 	
@@ -394,6 +413,9 @@ function draw() {
 function keyPressed() {
 	if (key === 'f') {
 		appleCount += 1
+	}
+	if (key === 'i') {
+		extremeMode = true
 	}
 }
 
