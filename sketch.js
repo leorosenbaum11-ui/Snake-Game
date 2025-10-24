@@ -164,37 +164,37 @@ function draw() {
 
 	if (direction === 2) {
 		if (hardMode === true) {
-			posY -= 5
+			posY -= 7
 		}
 		if (hardMode === false) {
-			posY -= 2
+			posY -= 5
 		}
 	}
 	
 	if (direction === 3) {
 		if (hardMode === true) {
-			posX += 5
+			posX += 7
 		}
 		if (hardMode === false) {
-			posX += 2
+			posX += 5
 		}
 	}
 	
 	if (direction === 4) {
 		if (hardMode === true) {
-			posX -= 5
+			posX -= 7
 		}
 		if (hardMode === false) {
-			posX -= 2
+			posX -= 5
 		}
 	}
 	
 	if (direction === 5) {
 		if (hardMode === true) {
-			posY += 5
+			posY += 7
 		}
 		if (hardMode === false) {
-			posY += 2
+			posY += 5
 		}
 	}
 	
