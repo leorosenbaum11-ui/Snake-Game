@@ -167,7 +167,7 @@ function draw() {
 			posY -= 5
 		}
 		if (hardMode === false) {
-			posY -= 5
+			posY -= 2
 		}
 	}
 	
@@ -176,7 +176,7 @@ function draw() {
 			posX += 5
 		}
 		if (hardMode === false) {
-			posX += 5
+			posX += 2
 		}
 	}
 	
@@ -185,7 +185,7 @@ function draw() {
 			posX -= 5
 		}
 		if (hardMode === false) {
-			posX -= 5
+			posX -= 2
 		}
 	}
 	
@@ -194,7 +194,7 @@ function draw() {
 			posY += 5
 		}
 		if (hardMode === false) {
-			posY += 5
+			posY += 2
 		}
 	}
 	
