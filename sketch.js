@@ -1,4 +1,3 @@
-let extremeMode
 let appleAmount
 let posX = 320
 let posY = 240
@@ -166,46 +165,37 @@ function draw() {
 
 	if (direction === 2) {
 		if (hardMode === true) {
-			posY -= 4
+			posY -= appleAmount * 0.4
 		}
 		if (hardMode === false) {
-			posY -= speed * 0.4
+			posY -= appleAmount * 0.4
 		}
 	}
 	
 	if (direction === 3) {
 		if (hardMode === true) {
-			posX += 4
+			posX += appleAmount * 0.4
 		}
-		if (hardMode === false && extremeMode === true) {
-			posX += speed * 0.4
-		}
-		if (hardMode === false && extremeMode === false) {
-			posX += 3
+		if (hardMode === false) {
+			posX += appleAmount * 0.4
 		}
 	}
 	
 	if (direction === 4) {
 		if (hardMode === true) {
-			posX -= 4
+			posX -= appleAmount * 0.4
 		}
-		if (hardMode === false && extremeMode === true) {
-			posX += speed * 0.4
-		}
-		if (hardMode === false && extremeMode === false) {
-			posX += 3
+		if (hardMode === false) {
+			posX -= appleAmount * 0.4
 		}
 	}
 	
 	if (direction === 5) {
 		if (hardMode === true) {
-			posY += 4
+			posY += appleAmount * 0.4
 		}
-		if (hardMode === false && extremeMode === true) {
-			posX += speed * 0.4
-		}
-		if (hardMode === false && extremeMode === false) {
-			posX += 3
+		if (hardMode === false) {
+			posY += appleAmount * 0.4
 		}
 	}
 	
@@ -334,11 +324,9 @@ function draw() {
 	if (appleDist < 30) {
 		if (hardMode === false) {
 			appleCount += 5;
-			appleAmount ++
 		}
 		if (hardMode === true) {
 			appleCount+= 5;
-			appleAmount++
 		}
 		spawnApple()
 	}
@@ -395,7 +383,7 @@ function draw() {
 		fill(0)
 		textFont('Courier New')
 		textSize(20)
-		text(appleAmount, 320, 40)
+		//text(appleCount, 320, 40)
 		pop()
 	}
 	
