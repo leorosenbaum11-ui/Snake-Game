@@ -213,11 +213,8 @@ function draw() {
 		if (hardMode === false) {
 			posX = 0
 		}
-		if (hardMode === false && extremeMode === true) {
-			posX += speed * 0.4
-		}
-		if (hardMode === false && extremeMode === false) {
-			posX += 3
+		if (hardMode === true) {
+			snakeDead = true
 		}
 	}
 	
@@ -225,11 +222,8 @@ function draw() {
 		if (hardMode === false) {
 			posX = 640
 		}
-		if (hardMode === false && extremeMode === true) {
-			posX += speed * 0.4
-		}
-		if (hardMode === false && extremeMode === false) {
-			posX += 3
+		if (hardMode === true) {
+			snakeDead = true
 		}
 	}
 	
