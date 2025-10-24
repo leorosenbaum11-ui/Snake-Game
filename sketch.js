@@ -160,42 +160,41 @@ function draw() {
 	if (direction === 1) {
 		
 	}
-	
-	speed = appleAmount
+
 
 	if (direction === 2) {
 		if (hardMode === true) {
-			posY -= appleAmount * 0.4
+			posY -= 5
 		}
 		if (hardMode === false) {
-			posY -= appleAmount * 0.4
+			posY -= 5
 		}
 	}
 	
 	if (direction === 3) {
 		if (hardMode === true) {
-			posX += appleAmount * 0.4
+			posX += 5
 		}
 		if (hardMode === false) {
-			posX += appleAmount * 0.4
+			posX += 5
 		}
 	}
 	
 	if (direction === 4) {
 		if (hardMode === true) {
-			posX -= appleAmount * 0.4
+			posX -= 5
 		}
 		if (hardMode === false) {
-			posX -= appleAmount * 0.4
+			posX -= 5
 		}
 	}
 	
 	if (direction === 5) {
 		if (hardMode === true) {
-			posY += appleAmount * 0.4
+			posY += 5
 		}
 		if (hardMode === false) {
-			posY += appleAmount * 0.4
+			posY += 5
 		}
 	}
 	
